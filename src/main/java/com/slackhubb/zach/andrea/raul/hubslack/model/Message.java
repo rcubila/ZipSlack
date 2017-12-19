@@ -13,26 +13,24 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long messageID;
     private String message;
-    private Long timestamp;
+    private String timestamp;
     private Long userId;
 
     public Message() {
-        this.messageID = new Date().getTime();
-        this.timestamp = new Date().getTime();
+        this(null);
     }
+
+
+    public Message(String message) {
+        this(message, new Date().getTime());
+    }
+
 
     public Message(String message, Long messageID) {
         this.messageID = messageID;
         this.message = message;
         this.userId = userId;
-        this.timestamp = messageID;
-    }
-
-    public Message(String message) {
-        this.messageID = new Date().getTime();
-        this.message = message;
-        this.userId = userId;
-        this.timestamp = new Date().getTime();
+        this.timestamp = new Date().toString();
     }
 
     public String getMessage() {
@@ -51,11 +49,11 @@ public class Message {
         this.messageID = messageID;
     }
 
-    public Long getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Long timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 

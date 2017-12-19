@@ -1,6 +1,6 @@
 package com.slackhubb.zach.andrea.raul.hubslack.controller;
 
-import com.slackhubb.zach.andrea.raul.hubslack.MessageService;
+import com.slackhubb.zach.andrea.raul.hubslack.service.MessageService;
 import com.slackhubb.zach.andrea.raul.hubslack.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
@@ -23,8 +22,8 @@ public class MessageController {
     MessageService messageService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Message> list(){
-        return messageService.getAll();
+    public ResponseEntity list(){
+        return new ResponseEntity(messageService.getAll(),HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST)

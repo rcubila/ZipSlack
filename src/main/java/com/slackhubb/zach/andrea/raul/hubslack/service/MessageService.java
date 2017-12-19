@@ -1,4 +1,4 @@
-package com.slackhubb.zach.andrea.raul.hubslack;
+package com.slackhubb.zach.andrea.raul.hubslack.service;
 
 import com.slackhubb.zach.andrea.raul.hubslack.model.Message;
 import com.slackhubb.zach.andrea.raul.hubslack.repository.MessageRepository;
@@ -32,10 +32,4 @@ public class MessageService {
     public void update(Long id,String newmessage){
         messageRepository.findOne(id).setMessage(newmessage);
     }
-
-
-
-
-
-
 }

@@ -1,15 +1,10 @@
 package com.slackhubb.zach.andrea.raul.hubslack.controller;
 
-import com.slackhubb.zach.andrea.raul.hubslack.MessageService;
+import com.slackhubb.zach.andrea.raul.hubslack.service.MessageService;
 import com.slackhubb.zach.andrea.raul.hubslack.model.Message;
-import com.slackhubb.zach.andrea.raul.hubslack.repository.MessageRepository;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -33,16 +28,12 @@ public class MessageControllerTest {
     MessageService messageService;
 
     Message mockMessage = new Message("hey", (long) 1);
-    String example = "{\"message\":\"hey\",\"messageID\":1,\"timestamp\":1,\"userId\":null}";
+    String example = "{\"messageID\":1,\"message\":\"hey\",\"timestamp\":\"Tue Dec 19 16:15:31 EST 2017\",\"userId\":null}";
 
-
-    @Test
-    public void testFindAll() {
-    }
 
     @Test
     public void create() throws Exception {
-        Mockito.when(messageService.addMessage(Mockito.any(Message.class))).thenReturn(mockMessage);
+//        Mockito.when(messageService.addMessage(Mockito.any(Message.class))).thenReturn(mockMessage);
 
         mockMvc.perform(MockMvcRequestBuilders
                 .post("/chat/messages")
@@ -58,8 +49,7 @@ public class MessageControllerTest {
         Mockito.when(messageService.get(Mockito.anyLong())).thenReturn(mockMessage);
 
         mockMvc.perform(MockMvcRequestBuilders
-                .get("/chat/messages/1")
-                .accept(MediaType.APPLICATION_JSON))
+                .get("/chat/messages/1").accept(MediaType.APPLICATION_JSON))
                 .andExpect(content().string(example));
     }
 
@@ -76,10 +66,10 @@ public class MessageControllerTest {
     @Test
     public void update() throws Exception {
 
+    }
 
-
-
-
+    @Test
+    public void testFindAll() {
     }
 
 
