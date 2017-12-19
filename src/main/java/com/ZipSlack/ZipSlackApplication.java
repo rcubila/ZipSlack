@@ -1,12 +1,12 @@
-package com.slackhubb.zach.andrea.raul.hubslack;
+package com.ZipSlack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HubslackApplication {
+public class ZipSlackApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HubslackApplication.class, args);
+		SpringApplication.run(ZipSlackApplication.class, args);
 	}
 }

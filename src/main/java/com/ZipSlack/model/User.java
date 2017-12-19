@@ -1,4 +1,4 @@
-package com.slackhubb.zach.andrea.raul.hubslack.model;
+package com.ZipSlack.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

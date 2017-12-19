@@ -1,6 +1,6 @@
-package com.slackhubb.zach.andrea.raul.hubslack.repository;
+package com.ZipSlack.repository;
 
-import com.slackhubb.zach.andrea.raul.hubslack.model.Message;
+import com.ZipSlack.model.Message;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

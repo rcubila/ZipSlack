@@ -1,7 +1,7 @@
-package com.slackhubb.zach.andrea.raul.hubslack.service;
+package com.ZipSlack.service;
 
-import com.slackhubb.zach.andrea.raul.hubslack.model.Message;
-import com.slackhubb.zach.andrea.raul.hubslack.repository.MessageRepository;
+import com.ZipSlack.model.Message;
+import com.ZipSlack.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

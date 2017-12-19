@@ -1,4 +1,4 @@
-package com.slackhubb.zach.andrea.raul.hubslack;
+package com.ZipSlack;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,7 @@
-package com.slackhubb.zach.andrea.raul.hubslack.controller;
+package com.ZipSlack.controller;
 
-import com.slackhubb.zach.andrea.raul.hubslack.service.MessageService;
-import com.slackhubb.zach.andrea.raul.hubslack.model.Message;
+import com.ZipSlack.model.Message;
+import com.ZipSlack.service.MessageService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
